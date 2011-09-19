@@ -1,0 +1,295 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+
+% (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
+%
+
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+\newlength{\outerbordwidth}
+
+\pagestyle{empty}
+
+\raggedbottom
+
+\raggedright
+
+\usepackage[svgnames]{xcolor}
+
+\usepackage{framed}
+
+\usepackage{tocloft}
+
+%-----------------------------------------------------------
+
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+%-----------------------------------------------------------
+
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+
+\setlength{\headheight}{-0.25in}
+
+\setlength{\headsep}{0in}
+
+\setlength{\oddsidemargin}{-0.25in}
+
+\setlength{\paperheight}{11in}
+
+\setlength{\paperwidth}{8.5in}
+
+\setlength{\tabcolsep}{0in}
+
+\setlength{\textheight}{9.75in}
+
+\setlength{\textwidth}{7in}
+
+\setlength{\topmargin}{-0.3in}
+
+\setlength{\topskip}{0in}
+
+\setlength{\voffset}{0.1in}
+
+%-----------------------------------------------------------
+
+%Custom commands
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+
+\newcommand{\resheading}[1]{\vspace{8pt}
+
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+
+    \begin{shaded}
+
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+
+    \end{shaded}
+
+  }\vspace{-5pt}
+
+}
+
+\newcommand{\ressubheading}[4]{
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+
+		\textbf{#1} & #2 \\
+
+		\textit{#3} & \textit{#4} \\
+
+\end{tabular*}\vspace{-6pt}}
+
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+
+\textbf{\Large Scott Clark} & \textbf{\today} \\
+
+Graduate Student, DOE Computational Science Graduate Fellow & sc932@cornell.edu \\
+
+657 Rhodes Hall, Ithaca, NY, 14853 & cam.cornell.edu/$\sim$sc932 \\
+
+\end{tabular*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Education}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item
+
+	\ressubheading{Cornell University}{Ithaca, NY}{Ph.D. Applied Math (current), M.S. Computer Science}{2008 - 2012(projected)}
+
+	\begin{itemize}
+
+		\resitem{Department of Energy Computational Science Graduate Fellow (Full Scholarship, 4 years)}
+
+		\resitem{Emphasis on machine learning/data mining and algorithm design/software development related to bioinformatics and optimization}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{Oregon State University}{Corvallis, OR}{B.Sc. Mathematics, B.Sc. Computational Physics, B.Sc. Physics}{2004 - 2008}
+
+	\begin{itemize}
+
+		\resitem{Graduated Magna Cum Laude with minors in Actuarial Sciences and Mathematical Sciences}
+
+		\resitem{Strong emphasis on scientific computing, numerical analysis and software development}
+
+	\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Skills}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item {\bf Development:} C/C++, Python, CUDA, JavaScript, Ruby (Rails), Java, FORTRAN, MATLAB
+
+\item {\bf Numerical Analysis:} Optimization, Linear Algebra, ODEs, PDEs, Monte Carlo, Computational Physics, Complex Systems, Iterative Methods, Tomology
+
+\item {\bf Computer Science:} Machine Learning, Data Mining, Parallel Programming, Data Structures, Artificial Intelligence, Operating Systems
+
+\item Discovering and implementing new ideas. Give me an API and a problem and I will figure it out.
+
+\item Diverse background in Math, Computer Science, Physics and Biology allows me to communicate to a wide scientific and general audience and begin contributing to any group immediately.
+
+\item I have worked in many places in a myriad of fields. I can readily learn and adapt to a new discipline, area or environment and start pushing real results quickly.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Research and Work Experience}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item
+
+	\ressubheading{Bloomberg LP}{New York, NY}{Financial Software Development Intern}{Summer 2011}
+
+	\begin{itemize}
+
+		\resitem{Developed end-to-end reporting software in \texttt{C++} and \texttt{javascript}}
+
+    \resitem{Implemented statistical models to perform forward and backward portfolio analysis}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{DOE Joint Genome Institute (Lawrence Berkeley National Lab)}{Walnut Creek, CA}{Researcher in Analysis Group under Dr. Zhong Wang}{Summer 2010}
+
+	\begin{itemize}
+
+		\resitem{Created \textbf{open source} genome validation software tool in \texttt{python} and \texttt{C}}
+
+    \resitem{Used machine learning to mine TBs of genome data efficiently using novel likelihood function}
+
+	\end{itemize}
+
+\item 
+
+	\ressubheading{Los Alamos National Laboratory}{Los Alamos, NM}{Researcher in Metagenomics Group under Dr. Nick Hengartner}{Summer 2009}
+
+	\begin{itemize}
+
+		\resitem{Wrote \textbf{open source} alignment algorithm software tool in \texttt{python}, \texttt{C} and \texttt{CUDA}}
+
+    \resitem{Used statistical models to discover sequence alignments using parallel algorithms on GPUs}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{Oregon State University}{Corvallis, OR}{Research Assistant under Prof. Malgorzata Peszynska and Prof. Rubin Landau}{2005-2008}
+
+	\begin{itemize}
+
+		\resitem{Finite element analysis with uncertainty and web-based teaching in \texttt{Java}}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{Max Plank Institute for the Physics of Complex Systems}{Dresden, Germany}{NSF REU Research Assistant under Prof. Steven Tomsovic}{Summer 2007}
+
+	\begin{itemize}
+
+		\resitem{Research on extreme value statistics in \texttt{MATLAB} and \texttt{FORTRAN}}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{University of California: Davis}{Davis, CA}{NSF REU Research Assistant under Prof. Daniel Cox}{Summer 2006}
+
+	\begin{itemize}
+
+		\resitem{Computational biophysics research as applied to protein folding in \texttt{Java}}
+
+	\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Selected Open Source Projects and Publications {\mdseries(github.com/sc932)}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item \ressubheading{ALE: Assembly Likelihood Estimator}{C, Python}{Probabalistic evaluation of genome assemblies}{2010 - Current}
+
+  \begin{itemize}
+
+    \resitem{Uses statistical likelihood function to score and rank genome assemblies}
+
+		\resitem{Publication being prepared for Genome Research}
+
+    \resitem{Presented at several conferences including SIAM Scientific Computing}
+
+	\end{itemize}
+
+\item \ressubheading{Velvetrope}{Python, C, CUDA}{A parallel statistical algorithm for finding homologous regions within sequences}{2009 - 2010}
+
+  \begin{itemize}
+
+		\resitem{Profiled in DEIXIS Magazine, Publication submitted to BMC Bioinformatics}
+
+    \resitem{Presented at several conferences including Supercomputing and Q-bio}
+
+	\end{itemize}
+
+\item \ressubheading{BetaHelix}{Java}{Computes various statistics about a left or right handed beta helix}{2006 - 2007}
+
+\begin{itemize}
+
+		\resitem{Published in Prion: Left handed $\beta$ helix models for mammalian prion fibrils.}
+
+	\end{itemize}
+
+
+\end{itemize}
+
+\resheading{Personal}
+
+\begin{itemize}
+
+\item {\bf Hobbies:} Poker, Golf, Racquet-based sports, Snowboarding, Video Games, Building things (physical and/or digital) and drinking good beer or scotch with new and old friends.
+
+\item {\bf Why Industry over Academia?} I love exploring new problems on the forefront of research, but academia moves too slowly and bureaucratically for me. I enjoy working in a fast-paced environment pushing measurable results to clients on a daily timescale, using the skills that I have honed throughout my academic career.
+
+\item {\bf My Ideal Position:} Working with a fun team solving interesting problems. I enjoy every part of development, from deep backend optimization to client-facing applications and interaction. I would love to make a difference wherever and however I am able while leveraging my machine learning, data mining and mathematical background.
+
+\end{itemize}
+
+\end{document}
