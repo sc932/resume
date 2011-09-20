@@ -1,0 +1,393 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2011 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage{tocloft}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\fboxsep}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Nathaniel Johnston} & \textbf{\today} \\
+University of Guelph & njohns01@uoguelph.ca \\
+Guelph, Ontario, Canada & www.nathanieljohnston.com \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{University of Guelph}{Guelph, ON}{Ph.D. Mathematics (in progress)}{2008 -- present}
+	\begin{itemize}
+		\resitem{Advisor: David W. Kribs}
+		\resitem{Relevant courses: Matrix Analysis at University of Houston (Houston, TX), Quantum Information Theory}
+	\end{itemize}
+
+\item
+	\ressubheading{University of Guelph}{Guelph, ON}{M.Sc. Mathematics}{2007 -- 2008}
+	\begin{itemize}
+		\resitem{Advisors: John Holbrook and David W. Kribs}
+		\resitem{Thesis: Stabilized Distance Measures and Quantum Error Correction}
+		\resitem{Graduated with a 98.3\% average}
+		\resitem{Relevant courses: Operator Algebras at Fields Institute (Toronto, ON), Quantum Information Theory at University of Waterloo (Waterloo, ON)}
+	\end{itemize}
+
+\item
+	\ressubheading{University of Guelph}{Guelph, ON}{B.A.H. Mathematics}{2003 -- 2007}
+	\begin{itemize}
+		\resitem{Graduated with a Major in Mathematics and a Minor in Statistics}
+		\resitem{Graduated with Honours, a 98.6\% cumulative average, and Dean's Honour List each year}
+		\resitem{Relevant courses: Functional Analysis, Operations Research, Quantum Error Correction}
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-2pt}
+	\begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{NSERC Canada Graduate Scholarship (CGS D) (\$35 000) \cftdotfill{\cftdotsep} 2008 -- 2011}\\
+		\multicolumn{2}{c}{Brock Doctoral Scholarship (\$30 000) \cftdotfill{\cftdotsep}2008 -- 2011}\\
+		\multicolumn{2}{c}{Ontario Graduate Scholarship (OGS) (\$15 000, declined) \cftdotfill{\cftdotsep}2008}\\
+		\multicolumn{2}{c}{Mathematics Graduate Scholarship (\$500) \cftdotfill{\cftdotsep}2008}\\
+		\multicolumn{2}{c}{NSERC Canada Graduate Scholarship (CGS M) (\$17 500) \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{Ontario Graduate Scholarship (OGS) (\$15 000, declined) \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{Governor General's Academic Silver Medal \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{Mathematics Graduation Prize (\$250) \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{College of Physical and Engineering Sciences Graduation Prize (\$250) \cftdotfill{\cftdotsep} 2007}\\
+		\multicolumn{2}{c}{NSERC Undergraduate Student Research Award (\$5 625) \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{Class of 1970 Scholarship (\$1 400) \cftdotfill{\cftdotsep}2006}\\
+		\multicolumn{2}{c}{Moffat Mathematics \& Statistics Award (\$900) \cftdotfill{\cftdotsep}2006}\\
+		\multicolumn{2}{c}{NSERC Undergraduate Student Research Award (\$5 625) \cftdotfill{\cftdotsep}2006}\\
+		\multicolumn{2}{c}{Dean's Scholarship (\$1 000) \cftdotfill{\cftdotsep}2005}\\
+		\multicolumn{2}{c}{Moffat Mathematics \& Statistics Award (\$900) \cftdotfill{\cftdotsep}2005}\\
+		\multicolumn{2}{c}{Dean's Scholarship (\$1 000) \cftdotfill{\cftdotsep}2004}\\
+		\multicolumn{2}{c}{Ted Newton Memorial Scholarship (\$1 500) \cftdotfill{\cftdotsep}2004}\\
+		\multicolumn{2}{c}{WebCT Conferencing Prize (\$250) \cftdotfill{\cftdotsep}2004}\\
+		\multicolumn{2}{c}{Board of Governors' Scholarship (\$2 000) \cftdotfill{\cftdotsep}2003 -- 2006}\\
+		\multicolumn{2}{c}{University of Guelph Entrance Scholarship (\$2 000) \cftdotfill{\cftdotsep} 2003} \\
+		\vphantom{E}
+\end{tabular*}
+\end{center}\vspace*{-16pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{Academic Visits}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{itemize}
+%\item 
+%	\ressubheading{University of Calgary}{Calgary, AB}{Institute for Quantum Information Science}{Feb. 14 -- 18, 2011}
+%
+%\item 
+%	\ressubheading{University of Bristol}{Bristol, UK}{Quantum Computation and Information Group}{May 10 -- June 18, 2010}
+%
+%\item 
+%	\ressubheading{University of Houston}{Houston, TX}{Department of Mathematics}{Sept. 1 -- Dec. 12, 2008}
+%\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Teaching Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item 
+	\ressubheading{Set Theory (MATH*2000)}{University of Guelph}{Sessional Lecturer}{Fall 2010}
+	\begin{itemize}
+		\resitem{Created assignments, examinations, and taught the course.}
+		\resitem{Received a 4.62 student evaluation (on a 1 to 5 scale).}
+	\end{itemize}
+
+\item 
+	\ressubheading{Calculus (MATH*1210)}{University of Guelph}{Teaching Assistant}{Winter 2010}
+	\begin{itemize}
+		\resitem{Led weekly labs guiding students through difficult problems.}
+	\end{itemize}
+
+\item 
+	\ressubheading{Set Theory (MATH*2000)}{University of Guelph}{Teaching Assistant}{Fall 2006, Fall 2007}
+	\begin{itemize}
+		\resitem{Led seminars guiding students through difficult problems and reviewing course material.}
+	\end{itemize}
+
+\item 
+	\ressubheading{Math Help Desk}{University of Guelph}{Teaching Assistant}{Sept. 2005 -- present}
+	\begin{itemize}
+		\resitem{Provided one-on-one and group tutoring to students in first and second year math courses.}
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications {\mdseries(available at \hyperref{http://www.nathanieljohnston.com/publications}{}{}{www.nathanieljohnston.com/publications})}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}[1)]
+\item
+	N. Johnston and E. St\o rmer, {\it Mapping Cones are Operator Systems}. Preprint (2011). E-print: arXiv:1102.2012 [math.OA]
+
+\item
+	N. Johnston and D. W. Kribs, {\it Quantum Gate Fidelity in Terms of Choi Matrices}. Preprint (2011). E-print: arXiv:1102.0948 [quant-ph]
+
+\item
+	N. Johnston, {\it Characterizing Operations Preserving Separability Measures via Linear Preserver Problems}. To appear in Linear and Multilinear Algebra (2011). E-print: arXiv:1008.3633 [quant-ph]
+
+\item
+	N. Johnston, D. W. Kribs, V. I. Paulsen, and R. Pereira, {\it Minimal and Maximal Operator Spaces and Operator Systems in Entanglement Theory}. Journal of Functional Analysis {\bf 260} 8, 2407--2423 (2011).
+
+\item
+	N. Johnston and D. W. Kribs, {\it A Family of Norms With Applications in Quantum Information Theory II}. Quantum Information \& Computation {\bf 11} 1 \& 2, 104--123 (2011).
+
+\item
+	N. Johnston and D. W. Kribs, {\it Generalized Multiplicative Domains and Quantum Error Correction}. Proceedings of the American Mathematical Society {\bf 139}, 627--639 (2011). 
+
+\item	
+	N. Johnston, {\it  The B36/S125 ``2 $\times$ 2'' Life-Like Cellular Automaton}. In {\it Game of Life Cellular Automata} chapter 7, A. Adamatzky, Springer-UK, 99--114 (2010).
+
+\item N. Johnston and D. W. Kribs, {\it Schmidt Operator Norms and Entanglement Theory}. Fourth International Conference on Quantum, Nano and Micro Technologies, 92--95 (2010).
+	\vspace{-0.1in}\begin{itemize}
+		\item[--] Selected as one of the best papers of the conference.
+	\end{itemize}
+
+\item
+	N. Johnston and D. W. Kribs, {\it A Family of Norms With Applications in Quantum Information Theory}. Journal of Mathematical Physics {\bf 51}, 082202 (2010).
+	\vspace{-0.1in}\begin{itemize}
+		\item[--] Selected for the Virtual Journal of Quantum Information.
+	\end{itemize}
+
+\item
+	M.-D. Choi, N. Johnston, and D. W. Kribs, {\it The Multiplicative Domain in Quantum Error Correction}. Journal of Physics A: Mathematical and Theoretical {\bf 42}, 245303 (2009).
+
+\item
+	N. Johnston, D. W. Kribs, and V. I. Paulsen, {\it Computing Stabilized Norms for Quantum Operations}. Quantum Information \& Computation {\bf 9} 1 \& 2, 16--35 (2009).
+
+\item
+	N. Johnston, D. W. Kribs, and C.-W. Teng, {\it An Operator Algebraic Formulation of the Stabilizer Formalism for Quantum Error Correction}. Acta Applicandae {\bf 108} 3, 687--696 (2009).
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Presentations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	{\it Quantum Gate Fidelity in Terms of Choi Matrices}
+	\begin{itemize}
+		\item Tuesday Theory Lunch -- Institute for Quantum Computing, Waterloo, Ontario (March 2011).
+		\item Quantum Information \& Geometric Statistics Seminar (QuIGS) -- University of Guelph, Guelph, Ontario (March 2011).
+	\end{itemize}
+
+\item
+	{\it Applications of a Family of Norms in Entanglement Theory}
+	\begin{itemize}
+		\item Institute for Quantum Information Science Seminar (IQIS) -- University of Calgary, Calgary, Alberta (February 2011).
+	\end{itemize}
+
+\item
+	{\it Minimal and Maximal Operator Spaces and Operator Systems in Entanglement Theory}
+	\begin{itemize}
+		\item 14th Workshop on Quantum Information Processing (Poster) -- Sentosa, Singapore (January 2011).
+		\item Quantum Information \& Geometric Statistics Seminar (QuIGS) -- University of Guelph, Guelph, Ontario (November 2010).
+	\end{itemize}
+
+\item
+	{\it Linear Preserver Problems in Quantum Information Theory}
+	\begin{itemize}
+		\item Quantum Information \& Geometric Statistics Seminar (QuIGS) -- University of Guelph, Guelph, Ontario (October 2010).
+	\end{itemize}
+
+\item
+	{\it Schmidt Norms for Quantum States}
+	\begin{itemize}
+		\item Quantum Computation \& Information Group Seminar -- University of Bristol, Bristol, United Kingdom (May 2010).
+		\item Tuesday Theory Lunch -- Institute for Quantum Computing, Waterloo, Ontario (December 2009).
+		\item Quantum Information \& Geometric Statistics Seminar (QuIGS) -- University of Guelph, Guelph, Ontario (November 2009).
+	\end{itemize}
+
+\item
+	{\it The Multiplicative Domain in Quantum Error Correction}
+	\begin{itemize}
+		\item Canadian Quantum Information Student Conference -- Toronto, Ontario (August 2009).
+		\item 4th Workshop on Theory of Quantum Computation, Communication and Cryptography (Poster) -- Waterloo, Ontario (May 2009).
+		\item Canadian Mathematical Society Winter 2008 Meeting -- Ottawa, Ontario (December 2008).
+		\item Quantum Information \& Geometric Statistics Seminar (QuIGS) -- University of Guelph, Guelph, Ontario (July 2008).
+	\end{itemize}
+
+\item
+	{\it Completely Bounded Norms in Quantum Information}
+	\begin{itemize}
+		\item Quantum Information \& Geometric Statistics Seminar (QuIGS) -- University of Guelph (August 2007).
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Participation in Workshops and Conferences}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{14th Workshop on Quantum Information Processing}{Sentosa, Singapore}{Centre for Quantum Technologies}{January 10 -- 14, 2011}
+
+\item
+	\ressubheading{Heilbronn Quantum Algorithms Day}{Bristol, United Kingdom}{University of Bristol}{May 18, 2010}
+
+\item
+	\ressubheading{Canadian Q.I. Student Conference (co-organizer)}{Toronto, ON}{Fields Institute}{August 22 -- 23, 2009}
+
+\item
+	\ressubheading{Workshop on Operator Structures in Quantum Information}{Toronto, ON}{Fields Institute}{July 6 -- 10, 2009}
+
+\item
+	\ressubheading{Workshop on Trends and Developments in Linear Algebra}{Trieste, Italy}{International Centre for Theoretical Physics}{June 22 -- 26, 2009}
+
+\item
+	\ressubheading{4th Workshop on Theory of Quantum Computation}{Waterloo, ON}{Institute for Quantum Computing}{May 11 -- 13, 2009}
+
+\item
+	\ressubheading{Canadian Mathematical Society Winter 2008 Meeting}{Ottawa, ON}{Carleton University}{December 4 -- 6, 2008}
+
+\item
+	\ressubheading{36th Canadian Operator Symposium}{Toronto, ON}{Fields Institute}{May 20 -- 24, 2008}
+
+\item
+	\ressubheading{Workshop on Noncommutative Dynamics and Applications}{Toronto, ON}{Fields Institute}{July 16 -- 20, 2007}
+
+\item
+	\ressubheading{35th Canadian Operator Symposium}{Guelph, ON}{University of Guelph}{June 5 -- 9, 2007}
+
+\item
+	\ressubheading{Seventh Canadian Summer School on Quantum Information}{Waterloo, ON}{Institute for Quantum Computing}{May 27 -- 31, 2007}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Other Research Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{NSERC Undergraduate Student Research Award}{University of Guelph}{Quantum Computing}{May 2007 -- Aug. 2007}
+	\begin{itemize}
+		\resitem{Searched for new methods of quantum error correction.}
+		\resitem{Implemented an algorithm for estimating the completely bounded norm of linear maps.}
+	\end{itemize}
+
+\item
+	\ressubheading{NSERC Undergraduate Student Research Award}{University of Guelph}{Quantum Computing}{May 2006 -- Aug. 2006}
+	\begin{itemize}
+		\resitem{Searched for new methods of quantum error correction.}
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Academic Service and Contributions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	Refereed papers for the following journals:{}\vspace{-0.05in}
+	\begin{itemize}
+		\item Linear Algebra and its Applications
+		\item Quantum Information Processing
+	\end{itemize}
+
+\item
+	Editor-in-Chief of the {\bf \hyperref{http://www.oeis.org}{}{}{On-Line Encyclopedia of Integer Sequences}}. \\
+	{\em April 2011 -- present}
+
+\item
+	Student representative for the University of Guelph Department of Mathematics \& Statistics {\bf Graduate Committee}. \\
+	{\em September 2010 -- present}
+
+\item
+	Creator and maintainer of {\bf \hyperref{http://www.conwaylife.com}{}{}{ConwayLife.com}}, a widely used tool for exploring Conway's Game of Life and an online encyclopedia containing over 950 articles about cellular automata. \\
+	{\em January 2009 -- present}
+
+\item
+	Language Editor for the {\bf Central European Journal of Mathematics}. \\
+	{\em December 2008 -- present}
+
+\item
+	Ontario Representative of the {\bf Canadian Mathematical Society Student Committee}. \\
+	{\em October 2008 -- June 2010}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{Technical Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{itemize}
+%\item
+%	Markup Languages
+%	\begin{itemize}
+%		\resitem{CSS, \LaTeX, (X)HTML}
+%	\end{itemize}
+%
+%\item
+%	Programming Languages
+%	\begin{itemize}
+%		\resitem{ASP, C, Java, Javascript, PHP, Python, SQL, Visual Basic}
+%	\end{itemize}
+%
+%\item
+%	Specialized Software
+%	\begin{itemize}
+%		\resitem{Maple, MATLAB, S-Plus}
+%	\end{itemize}
+%\end{itemize}
+\end{document}
