@@ -1,0 +1,299 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Scott Clark} & \textbf{\today} \\
+Graduate Student, DOE Computational Science Graduate Fellow & sc932@cornell.edu \\
+657 Rhodes Hall, Ithaca, NY, 14853 & cam.cornell.edu/$\sim$sc932 \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item
+
+	\ressubheading{Cornell University}{Ithaca, NY}{Ph.D. Applied Math (current), M.S. Computer Science}{2008 - 2012(projected)}
+
+	\begin{itemize}
+
+		\resitem{Department of Energy Computational Science Graduate Fellow (Full Scholarship, 4 years)}
+
+		\resitem{Emphasis on machine learning/data mining and algorithm design/software development related to bioinformatics and optimization}
+
+        \resitem{Committee: Peter Frazier (advisor), Steve Strogatz, Bart Selman, Zhong Wang}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{Oregon State University}{Corvallis, OR}{B.Sc. Mathematics, B.Sc. Computational Physics, B.Sc. Physics}{2004 - 2008}
+
+	\begin{itemize}
+
+		\resitem{Graduated Magna Cum Laude with minors in Actuarial Sciences and Mathematical Sciences}
+
+		\resitem{Strong emphasis on scientific computing, numerical analysis and software development}
+
+        \resitem{Advisors: Rubin Landau, Malgorzata Peszynska}
+
+	\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Industry Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Bloomberg LP}{New York, NY}{Financial Software Development Intern}{Summer 2011}
+	\begin{itemize}
+		\resitem{Developed end-to-end reporting software in \texttt{C++} and \texttt{javascript}}
+    \resitem{Implemented statistical models to perform forward and backward portfolio analysis}
+	\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{DOE Joint Genome Institute (Lawrence Berkeley National Lab)}{Walnut Creek, CA}{Researcher in Analysis Group under Dr. Zhong Wang}{Summer 2010}
+	\begin{itemize}
+		\resitem{Created \textbf{open source} genome validation software tool in \texttt{python} and \texttt{C}}
+    \resitem{Used machine learning to mine TBs of genome data efficiently using novel likelihood function}
+	\end{itemize}
+\item 
+	\ressubheading{Los Alamos National Laboratory}{Los Alamos, NM}{Researcher in Metagenomics Group under Dr. Nick Hengartner}{Summer 2009}
+	\begin{itemize}
+		\resitem{Wrote \textbf{open source} alignment algorithm software tool in \texttt{python}, \texttt{C} and \texttt{CUDA}}
+    \resitem{Used statistical models to discover sequence alignments using parallel algorithms on GPUs}
+	\end{itemize}
+\item
+	\ressubheading{Oregon State University}{Corvallis, OR}{Research Assistant under Prof. Malgorzata Peszynska and Prof. Rubin Landau}{2005-2008}
+	\begin{itemize}
+		\resitem{Finite element analysis with uncertainty and web-based teaching in \texttt{Java}}
+	\end{itemize}
+\item
+	\ressubheading{Max Plank Institute for the Physics of Complex Systems}{Dresden, Germany}{NSF REU Research Assistant under Prof. Steven Tomsovic}{Summer 2007}
+	\begin{itemize}
+		\resitem{Research on extreme value statistics in \texttt{MATLAB} and \texttt{FORTRAN}}
+	\end{itemize}
+\item
+	\ressubheading{University of California: Davis}{Davis, CA}{NSF REU Research Assistant under Prof. Daniel Cox}{Summer 2006}
+	\begin{itemize}
+		\resitem{Computational biophysics research as applied to protein folding in \texttt{Java}}
+	\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications {\mdseries(available at cam.cornell.edu/$\sim$sc932/Research.html)}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+ \item SC Clark, R Egan, P Frazier, and Z Wang, {\it ALE: an Assembly Likelihood Evaluation Framework to Assess the
+Accuracy of Metagenome Assemblies} in preparation for {\it Genome Research} (2012).
+ \item SC Clark, N Hengartner, and J Berendzen, {\it Velvetrope: a parallel, bitwise algorithm for ﬁnding homologous regions within multiple sequences} submitted to {\it BMC Bioinformatics} (2010).
+ \item SC Clark, {\it Solving Genomic Jigsaws}. DEIXIS Magazine {\bf 8} 30--32 (2010).
+ \item KC Kunes, SC Clark, DL Cox, and RR Singh, {\it Left handed β helix models for mammalian prion fibrils.} Prion {\bf 2}, 2, 81--90 (2008).
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Presentations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	{\it Learning for Metagenomic Assembly Validation and Optimization}
+	\begin{itemize}
+        \item Supercomputing 2011 (SC11) (Poster) -- Seattle, WA (November 2011)
+        \item SIAM CSE conference (Talk) -- Reno, NV (February 2011)
+		\item INFORMS annual meeting (Talk) -- Austin, TX (November 2010)
+		\item Cornell Math Sciences Seminar (Talk) -- Ithaca, NY (November 2010)
+		\item DOE Joint Genome Institute Visiting Speaker (Talk) -- Walnut Creek, CA (August 2010)
+	\end{itemize}
+\item
+	{\it Development and Exploration of Velvetrope: a bitwise, parallel alignment algorithm on biological sequences}
+	\begin{itemize}
+		\item Supercomputing 2010 (SC10) (Poster, ACM student competition) -- New Orleans, LA (November 2010)
+		\item Cornell Math Sciences Seminar (Talk) -- Ithaca, NY (November 2010)
+		\item DOE CSGF Annual Conference (Poster, award finalist) -- Washington D.C. (June 2010)
+	\end{itemize}
+\item
+	{\it Redundancy in random $k$-SAT}
+	\begin{itemize}
+		\item Cornell Engineering Research Conference (Poster) -- Ithaca, NY (May 2010)
+		\item DOE CSGF Annual Conference (Poster, award finalist) -- Washington D.C. (June 2009)
+	\end{itemize}
+
+\item
+	{\it Finite Element Analysis of Uncertain Interfaces}
+	\begin{itemize}
+		\item Oregon State University Computational Mathematics Seminar (Talk) -- Corvallis, OR (June 2008)
+	\end{itemize}
+
+\end{itemize}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Participation in Workshops and Conferences}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Supercomuputing 2011}{Seattle, WA}{Association for Computing Machinery/IEEE}{November 12-18, 2011}
+\item
+	\ressubheading{SIAM Conference on Computational Science and Engineering}{Reno, NV}{Society for Industrial and Applied Mathematics}{Feb 28-March 4, 2011}
+\item
+	\ressubheading{Supercomuputing 2010}{New Orleans, LA}{Association for Computing Machinery/IEEE}{November 13-19, 2010}
+\item
+	\ressubheading{INFORMS Annual Meeting 2010}{Austin, TX}{Institute for Operations Research and the Management Sciences}{November 7-10, 2010}
+\item
+	\ressubheading{ICCS Computational Science Summer School (Many-core)}{Oakland, CA}{International Center for Computational Science}{August 2-6, 2010}
+\item
+	\ressubheading{Computational Science Graduate Fellowship Annual Conference}{Washington D.C.}{Krell Institute}{June 22-24, 2010}
+\item
+	\ressubheading{High Performance Computing Workshop}{Washington D.C.}{Krell Institute}{June 21, 2010}
+\item
+	\ressubheading{Cornell Engineering Research Conference}{Ithaca, NY}{Cornell College of Engineering}{March 16, 2010}
+\item
+	\ressubheading{Supercomputing 2009}{Portland, OR}{Association for Computing Machinery/IEEE}{November 14-20, 2009}
+\item
+	\ressubheading{q-bio Conference on Cellular Information Processing,}{Los Alamos/Sante Fe, NM}{Los Alamos National Laboratory Center for Non-Linear Studies}{August 5-9, 2009}
+\item
+	\ressubheading{q-bio Summer School on Cellular Information Processing}{Los Alamos/Sante Fe, NM}{Los Alamos National Laboratory Center for Non-Linear Studies}{July 20 - August 4, 2009}
+\item
+	\ressubheading{Computational Science Graduate Fellowship Annual Conference}{Washington D.C.}{Krell Institute}{July 14-16, 2009}
+\item
+	\ressubheading{High Performance Computing Workshop}{Washington D.C.}{Krell Institute}{July 13, 2009}
+\item
+	\ressubheading{DOE ACTS Workshop (Computational Science Tools)}{Berkeley, CA}{NERSC/LBNL/ASCR/DOE Office of Science}{August 19-22, 2008}
+\item
+	\ressubheading{Computational Science Graduate Fellowship Annual Conference}{Washington D.C.}{Krell Institute}{June 16-19, 2008}
+\item
+	\ressubheading{Risk Analysis: Perception, Policy and Practice Workshop}{Research Triangle Park, NC}{Statistical and Applied Mathematical Sciences Institute}{October 3-4, 2008}
+\item
+	\ressubheading{Kickoff Workshop of the SAMSI program on Risk Analysis}{Research Triangle Park, NC}{Statistical and Applied Mathematical Sciences Institute}{September 16-19, 2007}
+\item
+	\ressubheading{SAMSI/CRSC Undergraduate Modeling Workshop}{Raleigh, NC}{SAMSI/NCSU/Duke}{May 21-25, 2007}
+\end{itemize}
+
+\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-2pt}
+	\begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{Department of Energy Computational Science Graduate Fellowship (CSGF) (\$300 000) \cftdotfill{\cftdotsep}2008-2012}\\
+        \multicolumn{2}{c}{NERSC Production Allocation (PI) (100 000 Cray XT4 hours) \cftdotfill{\cftdotsep} 2012}\\
+        \multicolumn{2}{c}{NERSC Startup Allocation Renewal (PI) (15 000 Cray XT4 hours) \cftdotfill{\cftdotsep} 2012}\\
+        \multicolumn{2}{c}{Cornell University Conference Travel Grant (\$390) \cftdotfill{\cftdotsep} 2011}\\
+        \multicolumn{2}{c}{NERSC Startup Allocation Renewal (PI) (15 000 Cray XT4 hours) \cftdotfill{\cftdotsep} 2011}\\
+		\multicolumn{2}{c}{Cornell University Conference Travel Grant (\$390) \cftdotfill{\cftdotsep} 2010}\\
+		\multicolumn{2}{c}{NERSC Startup Allocation (PI) (15 000 Cray XT4 hours) \cftdotfill{\cftdotsep} 2010}\\
+		\multicolumn{2}{c}{DOE CSGF Essay Contest Honorable Mention (\$500) \cftdotfill{\cftdotsep} 2010}\\
+		\multicolumn{2}{c}{Cornell University Sage Fellowship (\$55 000, declined) \cftdotfill{\cftdotsep}2008-2009}\\
+		\multicolumn{2}{c}{Joel Davis Award in Mathematics (\$1 000) \cftdotfill{\cftdotsep}2007-2008}\\
+		\multicolumn{2}{c}{URISC Undergraduate Research Fellowship (\$1 500) \cftdotfill{\cftdotsep}2007-2008}\\
+		\multicolumn{2}{c}{NSF Research Experience for Undergraduates Program (MPI PKS) (\$6 000) \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{Paul Copson Memorial Scholarship in Physics (\$1 000) \cftdotfill{\cftdotsep}2006-2007}\\
+		\multicolumn{2}{c}{NSF Research Experience for Undergraduates Program (UC Davis) (\$6 000) \cftdotfill{\cftdotsep}2006}\\
+		\multicolumn{2}{c}{Nicodemus Scholarship in Physics (\$1 000) \cftdotfill{\cftdotsep}2005-2006}\\
+		\multicolumn{2}{c}{Diversity Achievement Scholarship (\$4 000) \cftdotfill{\cftdotsep}2004-2008}\\
+		\vphantom{E}
+\end{tabular*}
+\end{center}\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Selected Open Source Projects {\mdseries(github.com/sc932)}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\item \ressubheading{ALE: Assembly Likelihood Estimator}{C, Python}{Probabalistic evaluation of genome assemblies}{2010 - Current}
+\item \ressubheading{Velvetrope}{Python, C, CUDA}{A parallel statistical algorithm for finding homologous regions within sequences}{2009 - 2010}
+\item \ressubheading{BetaHelix}{Java}{Computes various statistics about a left or right handed beta helix}{2006 - 2007}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item {\bf Development:} C/C++, Python, CUDA, JavaScript, Ruby (Rails), Java, FORTRAN, MATLAB
+
+\item {\bf Numerical Analysis:} Optimization, Linear Algebra, ODEs, PDEs, Monte Carlo, Computational Physics, Complex Systems, Iterative Methods, Tomology
+
+\item {\bf Computer Science:} Machine Learning, Data Mining, Parallel Programming, Data Structures, Artificial Intelligence, Operating Systems
+
+\item Discovering and implementing new ideas. Give me an API and a problem and I will figure it out.
+
+\item Diverse background in Math, Computer Science, Physics and Biology allows me to communicate to a wide scientific and general audience and begin contributing to any group immediately.
+
+\item I have worked in many places in a myriad of fields. I can readily learn and adapt to a new discipline, area or environment and start pushing real results quickly.
+
+\end{itemize}
+
+\end{document}
