@@ -12,9 +12,9 @@ In linux run
 ```bash
 $ pdflatex resumeName.tex
 ```
-This should result in the creation of resumeName.pdf
+This should result in the creation of ``resumeName.pdf``
 
 Ubuntu requirements:
-```
+```bash
 $ sudo apt-get install texlive texlive-latex-extra
 ```
