@@ -1,0 +1,8 @@
+cache:
+    - apt
+before_install:
+    - sudo apt-get update -qq
+    - sudo apt-get install -y texlive texlive-latex-extra
+script:
+    - pdflatex ScottClarkResume.tex
+    - pdflatex ScottClarkCV.tex
