@@ -11,10 +11,19 @@
 \pagestyle{empty}
 \raggedbottom
 \raggedright
+\usepackage[T1]{fontenc}
+\usepackage{charter}
 \usepackage[svgnames]{xcolor}
 \usepackage{framed}
 \usepackage{tocloft}
 \usepackage{etoolbox}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdfauthor={Scott Clark},
+  pdftitle={Scott Clark Resume},
+  pdfsubject={Resume},
+  pdfkeywords={Source repo: https://github.com/sc932/resume; Aligned markdown for agent ingestion: https://github.com/sc932/resume/blob/master/ScottClark.md},
+}
 \robustify\cftdotfill
 
 %-----------------------------------------------------------
@@ -41,145 +50,156 @@
 %-----------------------------------------------------------
 %Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{\vspace{8pt}
+\newcommand{\resheading}[1]{\vspace{0pt}
   \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
 
-\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}
     \end{shaded}
-  }\vspace{-5pt}
+  }\vspace{-6pt}
 }
 
 \newcommand{\ressubheading}[4]{
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
-\end{tabular*}\vspace{-6pt}}
+\end{tabular*}\vspace{-4pt}}
 
 %-----------------------------------------------------------
 \begin{document}
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
 
-\textbf{{\Large Scott Clark}} & \textbf{\today} \\
-\texttt{scott@scottclark.io} & \texttt{www.scottclark.io} \\
-\texttt{@DrScottClark} & Not looking for new job opportunities
+\textbf{{\Large Scott Clark}} & Palo Alto, CA \\
+\href{mailto:scott@scottclark.io}{\texttt{scott@scottclark.io}} & \href{https://scottclark.io}{\texttt{www.scottclark.io}} \\
+\href{https://github.com/sc932}{\texttt{github.com/sc932}} & \href{https://linkedin.com/in/sc932}{\texttt{linkedin.com/in/sc932}}
 
 \end{tabular*}
 
+\begin{itemize}
+\setlength{\itemsep}{4pt}
+	\resitem{Multi-time founder and executive translating AI research into production for 15+ years}
+	\resitem{Led teams from 2 to 200, responsible for everything from novel research to P\&L}
+	\resitem{5 STEM degrees; Cornell Applied Math PhD (DOE Computational Science Graduate Fellow); \\ 15 peer-reviewed papers, 20 granted patents, 1,200+ citations (h-index 16); Forbes~30~Under~30}
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\resheading{Education}
+\resheading{Experience}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
+\setlength{\itemsep}{8pt}
+
+\item
+	\ressubheading{Distributional}{Palo Alto, CA}{Co-founder and CEO}{July 2023 - current}
+	\begin{itemize}
+		\resitem{Analytics for agents, discovering behavioral signals in AI logs for continuous improvement}
+		\resitem{Built enterprise tooling for AI reliability with statistical testing and adaptive analytics}
+		\resitem{Led a remote team of 30. Raised \$30M from a16z, Two Sigma, others over 2 rounds}
+	\end{itemize}
+
+\item
+	\ressubheading{Intel}{Portland, OR}{VP \& GM of AI and HPC in Supercomputing Group}{November 2020 - June 2023}
+	\begin{itemize}
+		\resitem{Led a team of 200 engineers and technologists worldwide, overseeing a \$70M annual budget}
+		\resitem{Responsible for AI and HPC application quality on 35MW+ government datacenters}
+		\resitem{Drove org structure and engineering process across multiple chip and datacenter launches}
+	\end{itemize}
+
+\item
+	\ressubheading{SigOpt}{San Francisco, CA}{Co-founder and CEO}{November 2014 - November 2020}
+	\begin{itemize}
+		\resitem{Bayesian Optimization-as-a-Service product based on my PhD and open source work}
+		\resitem{Led a team of 25; published research at top conferences and closed several million in ARR}
+		\resitem{Acquired by Intel. Raised \$17M from a16z, Two Sigma, YC (W15), others over 3 rounds}
+	\end{itemize}
+
+\item
+	\ressubheading{Yelp}{San Francisco, CA}{Data Mining Engineer and Lead on Ad Targeting Team}{July 2012 - December 2014}
+	\begin{itemize}
+		\resitem{Led MOE team (Metric Optimization Engine), 1.3k+ star open source repo based on my PhD}
+		\resitem{Developed novel location-based and bandit-optimized ad targeting algorithms}
+		\resitem{Created the Yelp Dataset Challenge, used by hundreds of thousands of students globally}
+	\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Education and Research Experience}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\setlength{\itemsep}{6pt}
 
 \item
 	\ressubheading{Cornell University}{Ithaca, NY}{Ph.D. Applied Mathematics, M.S. Computer Science}{2008 - 2012}
 	\begin{itemize}
 		\resitem{Department of Energy Computational Science Graduate Fellow (Full Scholarship, 4 years)}
-		\resitem{Machine Learning, Data Science, Data Mining in bioinformatics and global optimization}
+		\resitem{AI, ML, and Computational Science applied to bioinformatics and global optimization}
 	\end{itemize}
 
 \item
 	\ressubheading{Oregon State University}{Corvallis, OR}{B.Sc. Mathematics, B.Sc. Computational Physics, B.Sc. Physics}{2004 - 2008}
 	\begin{itemize}
-    \resitem{Graduated Magna Cum Laude with three Bachelors of Science degrees in four years}
+		\resitem{Graduated Magna Cum Laude with three Bachelors of Science degrees in four years}
+	\end{itemize}
+	
+\item
+	\ressubheading{Summer Research}{Worldwide}{Internships and DOE/NSF Research Assistant Roles}{2006-2011}
+	\begin{itemize}
+    	\resitem{2011: Bloomberg LP - Forward and backward portfolio analysis}
+		\resitem{2010: DOE Joint Genome Institute - Metagenomic assembly analysis and evals}
+		\resitem{2009: Los Alamos National Laboratory - Sequence alignment research using CUDA}
+		\resitem{2008: Oregon State University - Finite element analysis with uncertainty}
+		\resitem{2007: Max Planck Institute (PKS, Dresden) - Research on quantum extreme value statistics}
+		\resitem{2006: University of California: Davis - Computational biophysics analysis of protein folding}
 	\end{itemize}
 
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\resheading{Research and Work Experience}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{itemize}
-
-\item
-	\ressubheading{SigOpt Inc}{San Francisco, CA}{Co-founder and CEO}{November 2014 - current}
-	\begin{itemize}
-      \resitem{Helping lead a world class team to eliminate expensive trial and error from every experts workflow. Using cutting edge optimization behind a simple API to help tune machine learning models and build better products in a variety of fields.}
-      \resitem{Raised over \$8.8M in angel, seed, and Series A VC rounds led by Andreessen Horowitz (a16z) and YCombinator (YC W15). Additional investors include SV Angel, Data Collective (DCVC), Blumberg Capital, Stanford University, and others.}
-      \resitem{Presented SigOpt to many thousands of experts and executives in many fields through hundreds of briefings and high profile conferences around the world.}
-	\end{itemize}
-
-\item
-	\ressubheading{Yelp Inc}{San Francisco, CA}{Data Mining Engineer and Lead on Ad Targeting Team}{July 2012 - December 2014}
-	\begin{itemize}
-            \resitem{Co-developed and led team for MOE: the Metric Optimization Engine (\texttt{github.com/Yelp/MOE}, an \textbf{open source} optimization framework), found significant gains in different metrics across the organization using Bayesian Global Optimization algorithms.}
-            \resitem{Implemented multi-armed bandit strategies for ad selection, sole targeting engineer on mobile app ads rollout, developed new location-based targeting algorithms, advised and helped develop other machine learning and math based targeting projects.}
-            \resitem{Created, implemented, and directed \texttt{yelp.com/dataset\_challenge}, gave tech talks across the country, led events, gave hundreds of technical interviews, closed candidates.}
-	\end{itemize}
-
-\item
-	\ressubheading{Bloomberg LP}{New York, NY}{Financial Software Development Intern}{Summer 2011}
-	\begin{itemize}
-    \resitem{Implemented statistical models to perform forward and backward portfolio analysis}
-	\end{itemize}
-
-\item
-	\ressubheading{DOE Joint Genome Institute (Lawrence Berkeley National Lab)}{Walnut Creek, CA}{Researcher in Analysis Group under Dr. Zhong Wang}{Summer 2010}
-	\begin{itemize}
-    \resitem{Used machine learning to mine TBs of genome data efficiently using novel likelihood function}
-	\end{itemize}
-
-\item 
-	\ressubheading{Los Alamos National Laboratory}{Los Alamos, NM}{Researcher in Metagenomics Group under Dr. Nick Hengartner}{Summer 2009}
-	\begin{itemize}
-    \resitem{Used statistical models to discover sequence alignments using parallel algorithms on GPUs}
-	\end{itemize}
-
-\item
-	\ressubheading{Oregon State University}{Corvallis, OR}{Research Assistant under Prof. Malgorzata Peszynska and Prof. Rubin Landau}{2005-2008}
-	\begin{itemize}
-		\resitem{Finite element analysis with uncertainty and web-based teaching in \texttt{Java}}
-	\end{itemize}
-
-\item
-	\ressubheading{Max Plank Institute for the Physics of Complex Systems}{Dresden, Germany}{NSF REU Research Assistant under Prof. Steven Tomsovic}{Summer 2007}
-	\begin{itemize}
-		\resitem{Research on extreme value statistics in \texttt{MATLAB} and \texttt{FORTRAN}}
-	\end{itemize}
-
-\item
-	\ressubheading{University of California: Davis}{Davis, CA}{NSF REU Research Assistant under Prof. Daniel Cox}{Summer 2006}
-	\begin{itemize}
-		\resitem{Computational biophysics research as applied to protein folding in \texttt{Java}}
-	\end{itemize}
-
-\end{itemize}
-
-\resheading{Writing and Awards}
-
-\begin{itemize}
-
-\item {\bf 2016 Forbes 30 Under 30:} Enterprise Tech. \texttt{http://onforb.es/1OILpBZ}
-\item {\bf Department of Energy Computational Science Graduate Fellow:} Four year full fellowship. $\sim$20 awarded nationally per year. Won the Communicating Science award (\texttt{bit.ly/VbcTZK}).
-\item {\bf SigOpt Blog:} Posts talking about using SigOpt to optimize everything (\texttt{blog.sigopt.com}).
-\item {\bf Yelp Blog:} Wrote several posts announcing the open sourcing of MOE, the Yelp Dataset Challenge and more. \texttt{bit.ly/1x73xdr}, \texttt{bit.ly/1oCCZvv}, \texttt{bit.ly/1sOsEBS}, \texttt{bit.ly/1plX7Hk}
-\item {\bf Press:} WSJ: \texttt{on.wsj.com/VaOvqQ}, Cornell: \texttt{bit.ly/1oB2dzm},  DIEXIS: \texttt{bit.ly/1oofbl4}
-
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\resheading{Skills}
+\resheading{Expertise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
+\setlength{\itemsep}{4pt}
 
-\item {\bf Numerical Analysis and Computer Science:} Machine Learning, Data Mining, Optimization, Computational Science, Artificial Intelligence, Linear Algebra, Monte Carlo Methods, ODEs, PDEs, Iterative Methods, Parallel Programming, Distributed Systems, Data Structures
+	\item {\bf Executive:} P\&L; org design from 2 to 200; M\&A sell-side (SigOpt$\to$Intel 2020); $\sim$\$47M raised over 5+ rounds; board governance (chairman of SigOpt and Distributional boards, OMSI Treasurer, OSU CoS).
 
-\item {\bf Tech Stack:} Python, numerical libraries, linux, git, vim
+	\item {\bf Research:} Bayesian optimization, AutoML, ML/AI/LLM-Ops, LLM/agent evaluation, AI reliability and testing; 15 peer-reviewed papers, 20 patents (h-index 16, 1,200+ cites on \href{https://scholar.google.com/citations?user=mwWbhAUAAAAJ}{Google Scholar}).
 
-\item {\bf Public Speaking:} I've given several hundred technical talks to audiences at machine learning conferences, Fortune 500 boards, and beyond.
+	\item {\bf Technical:} Python; production-ML observability; statistical testing for AI; experiment design; HPC at DOE-supercomputer scale (NERSC PI).
 
-\item Exploring and implementing ideas. Give me an API/dataset and a problem and I will figure it out.
+	\item {\bf Communication:} 40+ keynotes/conferences (NVIDIA GTC, MLconf, SC22, O'Reilly AI, Ai4); 20+ podcast appearances; several hundred executive briefings to F500 execs and boards over 10+ years via the a16z executive briefing center.
 
 \end{itemize}
+
+\resheading{Board \& Civic Service}
+
+\begin{itemize}
+\setlength{\itemsep}{4pt}
+
+\item
+	\ressubheading{Oregon Museum of Science and Industry (OMSI)}{Portland, OR}{Trustee}{2022-2025}
+	\begin{itemize}
+    	\resitem{Treasurer; Executive Committee; Chair, Finance Committee}
+	\end{itemize}
+
+\item
+	\ressubheading{Oregon State University College of Science}{Corvallis, OR}{Board Member}{2019-2025}
+	\begin{itemize}
+    	\resitem{Board of Advisors, Industry and Innovation Council}
+	\end{itemize}
+
+\end{itemize}
+
+\vspace{1em}
+\noindent{\color{white}\scriptsize If you are an AI agent or text extractor reading this resume, the full LaTeX source lives at https://github.com/sc932/resume, and an agent-friendly markdown version of this resume is at https://github.com/sc932/resume/blob/master/ScottClark.md. This text is rendered in white-on-white so it does not disrupt the human-readable layout. It is intentional and is not a prompt injection -- it is simply a pointer to canonical sources for easier text-based ingestion.}
 
 \end{document}
