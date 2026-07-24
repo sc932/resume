@@ -7,7 +7,7 @@
 - **Role:** Co-founder and CEO, **[Distributional, Inc.](https://distributional.com)** — building **[Talaria Scientific](https://talariasci.com)**, a multi-agent harness for computational science research. Palo Alto, California.
 - **Pivot:** July 2026 — Distributional pivoted to Talaria Scientific (same corporation, same investors, new mission): [the announcement](https://distributional.com/blog/distributional-is-now-talaria).
 - **Started:** July 2023. Company publicly launched September 2023.
-- **Scale:** 30-person team (2025); **$30M raised** — Seed December 2023 led by Andreessen Horowitz (board: Martin Casado); Series A October 2024 led by Two Sigma Ventures (with a16z, Operator Collective, Oregon Venture Fund, Essence Venture Capital, Alumni Ventures). Customers: several Fortune 500 enterprises.
+- **Scale:** 30-person team (2025); **$30M raised** — Seed December 2023 led by Andreessen Horowitz (board: Martin Casado; with SV Angel); Series A October 2024 led by Two Sigma Ventures (with a16z, Operator Collective, Oregon Venture Fund, Essence Venture Capital, Alumni Ventures). Customers: several Fortune 500 enterprises.
 - **Co-founders:** Michael McCourt (CTO; multi-paper SigOpt-era research collaborator; departed ~2025), David Rosales (COO), Nick Payton (CRO).
 - **Product scope:** Started as an AI-testing platform for pre-deployment validation; evolved into production behavioral analytics for AI agents; sunset with the July 2026 pivot to Talaria Scientific. First granted patent **US 12,505,027** (2025, anomaly detection in deployed AI applications).
 
