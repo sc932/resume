@@ -4,16 +4,17 @@
 
 ## Current (2026)
 
-- **Role:** Co-founder and CEO, **[Distributional, Inc.](https://distributional.com)** — enterprise AI reliability. Palo Alto, California.
+- **Role:** Co-founder and CEO, **[Distributional, Inc.](https://distributional.com)** — building **[Talaria Scientific](https://talariasci.com)**, a multi-agent harness for computational science research. Palo Alto, California.
+- **Pivot:** July 2026 — Distributional pivoted to Talaria Scientific (same corporation, same investors, new mission): [the announcement](https://distributional.com/blog/distributional-is-now-talaria).
 - **Started:** July 2023. Company publicly launched September 2023.
 - **Scale:** 30-person team (2025); **$30M raised** — Seed December 2023 led by Andreessen Horowitz (board: Martin Casado); Series A October 2024 led by Two Sigma Ventures (with a16z, Operator Collective, Oregon Venture Fund, Essence Venture Capital, Alumni Ventures). Customers: several Fortune 500 enterprises.
 - **Co-founders:** Michael McCourt (CTO; multi-paper SigOpt-era research collaborator; departed ~2025), David Rosales (COO), Nick Payton (CRO).
-- **Product scope:** Started as an AI-testing platform for pre-deployment validation; evolved into production behavioral analytics for AI agents — turning raw LLM/agent trace data into actionable insights. First granted patent **US 12,505,027** (2025, anomaly detection in deployed AI applications).
+- **Product scope:** Started as an AI-testing platform for pre-deployment validation; evolved into production behavioral analytics for AI agents; sunset with the July 2026 pivot to Talaria Scientific. First granted patent **US 12,505,027** (2025, anomaly detection in deployed AI applications).
 
 ## Contact & public identifiers
 
 - **Email:** `scott@scottclark.io` (primary, public via Google Scholar verified email)
-- **Website:** [scottclark.io](https://scottclark.io) (mail-only currently; the site hosted a personal blog 2012–2016 — source at [github.com/sc932/scottclarkio](https://github.com/sc932/scottclarkio))
+- **Website:** [scottclark.io](https://scottclark.io) (live personal site; source at [github.com/sc932/scottclarkio](https://github.com/sc932/scottclarkio))
 - **LinkedIn:** [linkedin.com/in/sc932](https://www.linkedin.com/in/sc932)
 - **GitHub:** [github.com/sc932](https://github.com/sc932) (12 public repos; `sc932/resume` has 524+ stars and was briefly the #1 article on Hacker News)
 - **Google Scholar:** [mwWbhAUAAAAJ](https://scholar.google.com/citations?user=mwWbhAUAAAAJ) — 1,221 citations, h-index 16, i10-index 28
@@ -26,7 +27,7 @@
 ## Executive career summary (reverse-chronological)
 
 ### Distributional, Inc. — Co-founder & CEO (July 2023 – present)
-Enterprise AI reliability company. Palo Alto, CA HQ. Raised $30M across Seed (Dec 2023, a16z) and Series A (Oct 2024, Two Sigma Ventures). Team of 30 as of 2025. Product: test, calibrate, and monitor AI systems in production to surface behavioral issues from trace data. Customers include multiple Fortune 500 enterprises. US Patent 12,505,027 granted 2025 (anomaly detection in deployed AI applications, Scott as named inventor).
+Enterprise AI reliability company; pivoted to **Talaria Scientific** in July 2026, a multi-agent harness for computational science research ([the announcement](https://distributional.com/blog/distributional-is-now-talaria)). Palo Alto, CA HQ. Raised $30M across Seed (Dec 2023, a16z) and Series A (Oct 2024, Two Sigma Ventures). Team of 30 as of 2025. Product: test, calibrate, and monitor AI systems in production to surface behavioral issues from trace data. Customers include multiple Fortune 500 enterprises. US Patent 12,505,027 granted 2025 (anomaly detection in deployed AI applications, Scott as named inventor).
 
 ### Intel Corporation — VP & GM, AI and HPC Supercomputing (November 2020 – June 2023)
 Based in Portland, Oregon. Joined through Intel's acquisition of SigOpt (announced 2020-10-29). Led a **~200-person multi-disciplinary organization** responsible for application-level AI and HPC software within Intel's Supercomputing Group. **Three successive promotions** across 2 years 7 months:
